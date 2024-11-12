@@ -48,17 +48,16 @@
         }
 
         .header {
-            background: linear-gradient(135deg, rgba(26, 79, 122, 0.9), rgba(41, 128, 185, 0.9)),
-                        url('https://images.unsplash.com/photo-1451187580459-43490279c0fa?ixlib=rb-1.2.1&auto=format&fit=crop&w=1920&q=80');
+            background: linear-gradient(135deg, #1a1c3d, #0c1445, #000428);
             background-size: cover;
             background-position: center;
             background-attachment: fixed;
             color: white;
             text-align: center;
-            padding: 8rem 0;
+            padding: 4rem 1rem;
             position: relative;
             overflow: hidden;
-            margin-bottom: 2rem;
+            margin-bottom: 1rem;
         }
 
         .header::before {
@@ -77,17 +76,18 @@
         .header-content {
             position: relative;
             z-index: 1;
-            padding-bottom: 80px;
+            padding: 0 1rem;
+            width: 100%;
             max-width: 800px;
             margin: 0 auto;
+            text-align: left;
+            padding-left: 5rem;
         }
 
         .header-content h1 {
             font-size: 3.5rem;
             margin-bottom: 1rem;
-            opacity: 0;
-            transform: translateY(30px);
-            animation: fadeInUp 0.8s ease forwards;
+            word-wrap: break-word;
         }
 
         .header-content p {
@@ -102,6 +102,14 @@
 
         .header-content p:nth-child(3) {
             animation: fadeInUp 0.8s ease 0.4s forwards;
+        }
+
+        .header-content p:nth-child(4) {
+            animation: fadeInUp 0.8s ease 0.6s forwards;
+        }
+
+        .header-content p:nth-child(5) {
+            animation: fadeInUp 0.8s ease 0.8s forwards;
         }
 
         @keyframes fadeInUp {
@@ -530,7 +538,670 @@
                 font-size: 1.5rem;
             }
         }
+
+        .cv-download {
+            margin-top: 2rem;
+        }
+
+        .cv-btn {
+            display: inline-block;
+            background: #3498db;
+            color: white;
+            padding: 1rem 2rem;
+            border-radius: 8px;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            font-weight: 600;
+        }
+
+        .cv-btn:hover {
+            background: #2980b9;
+            transform: translateY(-5px);
+            box-shadow: 0 5px 15px rgba(41, 128, 185, 0.4);
+        }
+
+        .cv-section {
+            background: white;
+            padding: 3rem;
+            border-radius: 15px;
+            margin-bottom: 3rem;
+            box-shadow: 0 6px 15px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .cv-section:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+        }
+
+        .cv-content {
+            display: grid;
+            gap: 2rem;
+        }
+
+        .cv-item {
+            border-left: 3px solid #3498db;
+            padding-left: 1.5rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .cv-item h3 {
+            color: #2c3e50;
+            margin-bottom: 1rem;
+        }
+
+        .cv-item ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .cv-item ul li {
+            margin-bottom: 1rem;
+        }
+
+        .cv-item strong {
+            color: #3498db;
+            display: block;
+            margin-bottom: 0.5rem;
+        }
+
+        .cv-item p {
+            margin: 0.2rem 0;
+            color: #666;
+        }
+
+        .header-profile-img {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            border: 4px solid white;
+            margin-bottom: 2rem;
+            box-shadow: 0 0 20px rgba(255, 255, 255, 0.3);
+            animation: fadeInUp 0.8s ease forwards;
+            opacity: 0;
+            transform: translateY(30px);
+        }
+
+        .header-profile-img:hover {
+            transform: scale(1.05);
+            border-color: #3498db;
+            transition: all 0.3s ease;
+        }
+
+        @media screen and (max-width: 768px) {
+            .header {
+                padding: 3rem 1rem;
+            }
+            
+            .header-content {
+                padding: 0;
+            }
+            
+            .header-content h1 {
+                font-size: 2rem;
+                padding: 0 1rem;
+            }
+            
+            .header-content p {
+                font-size: 0.9rem;
+                padding: 0 1rem;
+            }
+            
+            .header-profile-img {
+                width: 120px;
+                height: 120px;
+            }
+            
+            .container {
+                padding: 1rem;
+            }
+            
+            .about, .education, .skills, .projects, .achievements, .contact {
+                padding: 1.5rem;
+                margin-bottom: 1.5rem;
+            }
+            
+            .profile {
+                padding: 1rem;
+            }
+            
+            .profile img {
+                width: 150px;
+                height: 150px;
+            }
+            
+            .social-links {
+                display: flex;
+                justify-content: center;
+                flex-wrap: wrap;
+                gap: 1rem;
+            }
+            
+            .social-links a {
+                font-size: 1.5rem;
+                margin: 0.5rem;
+            }
+            
+            .cv-btn {
+                padding: 0.8rem 1.5rem;
+                font-size: 0.9rem;
+            }
+        }
+
+        @media screen and (max-width: 480px) {
+            .header {
+                padding: 2rem 0.5rem;
+            }
+            
+            .header-content h1 {
+                font-size: 1.5rem;
+            }
+            
+            .header-content p {
+                font-size: 0.85rem;
+                margin-bottom: 0.5rem;
+            }
+            
+            .header-profile-img {
+                width: 100px;
+                height: 100px;
+                margin-bottom: 1rem;
+            }
+            
+            .container {
+                padding: 0.5rem;
+            }
+            
+            .about, .education, .skills, .projects, .achievements, .contact {
+                padding: 1rem;
+                margin-bottom: 1rem;
+            }
+            
+            h2 {
+                font-size: 1.3rem;
+                margin-bottom: 1rem;
+            }
+            
+            .skill-list {
+                gap: 0.5rem;
+            }
+            
+            .skill-item {
+                font-size: 0.8rem;
+                padding: 0.4rem 0.8rem;
+            }
+            
+            .project-item {
+                padding: 1rem;
+            }
+            
+            .cv-section {
+                padding: 1rem;
+            }
+            
+            .cv-item {
+                padding-left: 1rem;
+                margin-bottom: 1rem;
+            }
+            
+            .cv-item h3 {
+                font-size: 1.1rem;
+            }
+        }
+
+        @media screen and (max-width: 360px) {
+            .header-content h1 {
+                font-size: 1.3rem;
+            }
+            
+            .header-profile-img {
+                width: 80px;
+                height: 80px;
+            }
+            
+            .header-content p {
+                font-size: 0.8rem;
+            }
+            
+            .container {
+                padding: 0.5rem;
+            }
+            
+            .social-links a {
+                font-size: 1.2rem;
+                margin: 0.3rem;
+            }
+        }
+
+        @media screen and (max-width: 768px) {
+            .ocean {
+                height: 60px;
+            }
+            
+            .wave {
+                animation-duration: 15s;
+            }
+            
+            .wave:nth-of-type(2) {
+                animation-duration: 20s;
+            }
+            
+            .wave:nth-of-type(3) {
+                animation-duration: 25s;
+            }
+        }
+
+        .night-sky {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            overflow: hidden;
+        }
+
+        .stars {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            animation: twinkle 1s infinite;
+        }
+
+        .stars::before,
+        .stars::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-image: 
+                radial-gradient(2px 2px at 20px 30px, #fff, rgba(0,0,0,0)),
+                radial-gradient(2px 2px at 40px 70px, #fff, rgba(0,0,0,0)),
+                radial-gradient(2px 2px at 50px 160px, #fff, rgba(0,0,0,0)),
+                radial-gradient(2px 2px at 90px 40px, #fff, rgba(0,0,0,0)),
+                radial-gradient(2px 2px at 130px 80px, #fff, rgba(0,0,0,0)),
+                radial-gradient(2px 2px at 160px 120px, #fff, rgba(0,0,0,0));
+            background-repeat: repeat;
+            background-size: 200px 200px;
+            animation: twinkle 4s infinite;
+            opacity: 0;
+        }
+
+        .stars::after {
+            background-position: 100px 100px;
+            animation-delay: 2s;
+        }
+
+        .moon {
+            position: absolute;
+            top: 20%;
+            right: 15%;
+            width: 80px;
+            height: 80px;
+            background: #ffd700;
+            border-radius: 50%;
+            box-shadow: 0 0 40px #ffd700;
+            animation: moonGlow 4s infinite alternate;
+        }
+
+        .moon::before {
+            content: '';
+            position: absolute;
+            top: 8px;
+            left: 15px;
+            width: 20px;
+            height: 20px;
+            background: rgba(255, 255, 255, 0.4);
+            border-radius: 50%;
+            filter: blur(2px);
+        }
+
+        @keyframes twinkle {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0.3; }
+        }
+
+        @keyframes moonGlow {
+            from { box-shadow: 0 0 40px #ffd700; }
+            to { box-shadow: 0 0 60px #ffd700; }
+        }
+
+        /* Add responsive styles for the night sky */
+        @media screen and (max-width: 768px) {
+            .moon {
+                width: 60px;
+                height: 60px;
+                right: 10%;
+            }
+        }
+
+        @media screen and (max-width: 480px) {
+            .moon {
+                width: 40px;
+                height: 40px;
+                top: 15%;
+            }
+        }
+
+        .shooting-star {
+            position: absolute;
+            width: 2px;
+            height: 2px;
+            background: white;
+            pointer-events: none;
+        }
+
+        @keyframes shootingStar {
+            0% {
+                transform: translate(0, 0) rotate(-45deg);
+                opacity: 1;
+            }
+            100% {
+                transform: translate(-200px, 200px) rotate(-45deg);
+                opacity: 0;
+            }
+        }
+
+        .loading-spinner {
+            display: inline-block;
+            width: 20px;
+            height: 20px;
+            border: 3px solid rgba(255,255,255,0.3);
+            border-radius: 50%;
+            border-top-color: #fff;
+            animation: spin 1s ease-in-out infinite;
+            margin-right: 8px;
+        }
+
+        @keyframes spin {
+            to { transform: rotate(360deg); }
+        }
+
+        .contact-form button:disabled {
+            opacity: 0.7;
+            cursor: not-allowed;
+        }
+
+        /* Add smooth transitions for project cards */
+        .project-item {
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        /* Add hover effect for skill items */
+        .skill-item {
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        .skill-item:hover {
+            transform: translateY(-5px) scale(1.1);
+            box-shadow: 0 10px 20px rgba(52, 152, 219, 0.3);
+        }
+
+        /* Dinosaur Animation Styles */
+        .dino-container {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 150px;
+            z-index: 2;
+        }
+
+        .dinosaur {
+            position: absolute;
+            bottom: 28px;
+            left: 50px;
+            width: 88px;
+            height: 94px;
+            background-image: url('https://www.dropbox.com/s/cl0yj8x1eqyd8u4/sprite.png?raw=1');
+            background-size: 1000%;
+            animation: moveDino 0.6s steps(8) infinite,
+                       runDino 15s linear infinite;
+        }
+
+        .ground {
+            position: absolute;
+            bottom: 0;
+            width: 100%;
+            height: 24px;
+            background: rgba(255, 255, 255, 0.1);
+        }
+
+        @keyframes moveDino {
+            from {
+                background-position-x: 0;
+            }
+            to {
+                background-position-x: -800%;
+            }
+        }
+
+        @keyframes runDino {
+            from {
+                left: -100px;
+            }
+            to {
+                left: 100%;
+            }
+        }
+
+        /* Add hover effect */
+        .dinosaur:hover {
+            transform: translateY(-20px);
+            transition: transform 0.3s ease;
+        }
+
+        /* Responsive adjustments */
+        @media screen and (max-width: 768px) {
+            .dino-container {
+                height: 100px;
+            }
+
+            .dinosaur {
+                width: 44px;
+                height: 47px;
+                bottom: 14px;
+            }
+
+            .ground {
+                height: 12px;
+            }
+        }
+
+        .lottie-container {
+            position: absolute;
+            bottom: -50px;
+            right: 0;
+            z-index: 1;
+            pointer-events: none;
+        }
+
+        /* Responsive adjustments */
+        @media screen and (max-width: 1200px) {
+            .lottie-container {
+                transform: scale(0.8);
+                right: -50px;
+            }
+        }
+
+        @media screen and (max-width: 992px) {
+            .header-content {
+                padding-left: 2rem;
+            }
+            
+            .lottie-container {
+                transform: scale(0.6);
+                right: -100px;
+            }
+        }
+
+        @media screen and (max-width: 768px) {
+            .header-content {
+                text-align: center;
+                padding-left: 1rem;
+            }
+            
+            .lottie-container {
+                display: none;
+            }
+        }
+
+        .skills {
+            position: relative;
+            overflow: visible;
+        }
+
+        .skills-lottie {
+            position: absolute;
+            right: 20px;
+            top: 50%;
+            transform: translateY(-50%);
+            z-index: 1;
+            opacity: 0.9;
+        }
+
+        /* Responsive adjustments */
+        @media screen and (max-width: 992px) {
+            .skills-lottie {
+                position: relative;
+                right: auto;
+                top: auto;
+                transform: none;
+                margin: 20px auto;
+                text-align: center;
+            }
+            
+            .skills-lottie lottie-player {
+                width: 200px;
+                height: 200px;
+                margin: 0 auto;
+            }
+        }
+
+        @media screen and (max-width: 768px) {
+            .skills-lottie lottie-player {
+                width: 150px;
+                height: 150px;
+            }
+        }
+
+        .skills-header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-bottom: 2rem;
+            flex-wrap: wrap;
+            width: 100%;
+        }
+
+        .skills-header h2 {
+            margin: 0;
+            flex: 1;
+        }
+
+        .skills-lottie {
+            width: 150px;
+            height: 150px;
+            margin-left: 20px;
+            flex-shrink: 0;
+        }
+
+        /* Pastikan lottie-player memiliki ukuran yang tepat */
+        .skills-lottie lottie-player {
+            width: 150px !important;
+            height: 150px !important;
+        }
+
+        /* Responsive adjustments */
+        @media screen and (max-width: 992px) {
+            .skills-header {
+                justify-content: space-between;
+                gap: 1rem;
+            }
+            
+            .skills-lottie {
+                width: 120px;
+                height: 120px;
+            }
+            
+            .skills-lottie lottie-player {
+                width: 120px !important;
+                height: 120px !important;
+            }
+        }
+
+        @media screen and (max-width: 768px) {
+            .skills-header {
+                flex-direction: row;
+                align-items: center;
+                justify-content: space-between;
+            }
+            
+            .skills-lottie {
+                width: 100px;
+                height: 100px;
+                margin-left: 15px;
+            }
+            
+            .skills-lottie lottie-player {
+                width: 100px !important;
+                height: 100px !important;
+            }
+        }
+
+        @media screen and (max-width: 480px) {
+            .skills-header {
+                margin-bottom: 1.5rem;
+            }
+            
+            .skills-lottie {
+                width: 80px;
+                height: 80px;
+                margin-left: 10px;
+            }
+            
+            .skills-lottie lottie-player {
+                width: 80px !important;
+                height: 80px !important;
+            }
+        }
+
+        .contact-header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-bottom: 2rem;
+            flex-wrap: wrap;
+        }
+
+        .contact-lottie {
+            width: 200px;
+            height: 200px;
+        }
+
+        .contact-form {
+            margin-top: 2rem;
+        }
+
+        /* Responsive adjustments */
+        @media screen and (max-width: 992px) {
+            .contact-header {
+                flex-direction: column;
+                align-items: center;
+                text-align: center;
+            }
+            
+            .contact-lottie {
+                margin-top: 1.5rem;
+                width: 150px;
+                height: 150px;
+            }
+        }
     </style>
+    <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
 </head>
 <body>
     <div class="clouds">
@@ -540,15 +1211,29 @@
     </div>
 
     <div class="header">
+        <div class="night-sky">
+            <div class="stars"></div>
+            <div class="moon"></div>
+        </div>
+        
         <div class="header-content">
+            <img src="https://assets.onecompiler.app/42hja26js/42xsunwkc/WhatsApp%20Image%202024-11-11%20at%2009.44.29.jpeg" alt="Alvito Ricky Deanova" class="header-profile-img">
             <h1 class="glow-text"><span class="highlight">Alvito Ricky Deanova</span></h1>
             <p class="glow-text">Mahasiswa Universitas Nahdlatul Ulama Jepara</p>
             <p class="glow-text">NIM: 231240001456</p>
+            <p class="glow-text">Teknik Informatika</p>
         </div>
-        <div class="ocean">
-            <div class="wave"></div>
-            <div class="wave"></div>
-            <div class="wave"></div>
+
+        <!-- Repositioned Lottie animation -->
+        <div class="lottie-container">
+            <lottie-player 
+                src="https://assets2.lottiefiles.com/packages/lf20_iorpbol0.json"
+                background="transparent"
+                speed="1"
+                style="width: 400px; height: 400px;"
+                loop
+                autoplay>
+            </lottie-player>
         </div>
     </div>
 
@@ -561,6 +1246,59 @@
                 <a href="#" target="_blank"><i class="fab fa-github"></i></a>
                 <a href="#" target="_blank"><i class="fab fa-twitter"></i></a>
                 <a href="#" target="_blank"><i class="fab fa-instagram"></i></a>
+            </div>
+            <div class="cv-download">
+                <a href="#" class="cv-btn" onclick="downloadCV()">
+                    <i class="fas fa-download"></i> Download CV
+                </a>
+            </div>
+        </div>
+
+        <div class="cv-section">
+            <h2>Curriculum Vitae</h2>
+            <div class="cv-content">
+                <div class="cv-item">
+                    <h3>Data Pribadi</h3>
+                    <ul>
+                        <li><strong>Nama Lengkap:</strong> Alvito Ricky Deanova</li>
+                        <li><strong>Tempat, Tanggal Lahir:</strong> Jepara, 15 Januari 2005</li>
+                        <li><strong>Alamat:</strong> Jepara, Jawa Tengah</li>
+                        <li><strong>Email:</strong> alvito.ricky@example.com</li>
+                        <li><strong>Telepon:</strong> +62 838-3034-3912</li>
+                    </ul>
+                </div>
+                
+                <div class="cv-item">
+                    <h3>Riwayat Pendidikan</h3>
+                    <ul>
+                        <li>
+                            <strong>2023 - Sekarang</strong>
+                            <p>Universitas Nahdlatul Ulama Jepara</p>
+                            <p>Jurusan Ilmu Komputer</p>
+                        </li>
+                        <li>
+                            <strong>2020 - 2023</strong>
+                            <p>SMA Negeri 1 Jepara</p>
+                            <p>Jurusan IPA</p>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="cv-item">
+                    <h3>Pengalaman Organisasi</h3>
+                    <ul>
+                        <li>
+                            <strong>2023 - Sekarang</strong>
+                            <p>Himpunan Mahasiswa Ilmu Komputer</p>
+                            <p>Divisi Teknologi Informasi</p>
+                        </li>
+                        <li>
+                            <strong>2022 - 2023</strong>
+                            <p>OSIS SMA Negeri 1 Jepara</p>
+                            <p>Koordinator Divisi Teknologi</p>
+                        </li>
+                    </ul>
+                </div>
             </div>
         </div>
 
@@ -636,7 +1374,20 @@
         </div>
 
         <div class="contact">
-            <h2>Hubungi Saya</h2>
+            <div class="contact-header">
+                <h2>Hubungi Saya</h2>
+                <!-- Add Lottie animation container -->
+                <div class="contact-lottie">
+                    <lottie-player 
+                        src="https://assets2.lottiefiles.com/packages/lf20_u25cckyh.json"
+                        background="transparent"
+                        speed="1"
+                        style="width: 200px; height: 200px;"
+                        loop
+                        autoplay>
+                    </lottie-player>
+                </div>
+            </div>
             <form class="contact-form" onsubmit="sendWhatsApp(event)">
                 <input type="text" id="name" placeholder="Nama Anda" required>
                 <input type="email" id="email" placeholder="Email Anda" required>
@@ -670,6 +1421,96 @@
             // Reset the form
             event.target.reset();
         }
+
+        function downloadCV() {
+            // Create a simple text CV
+            const cvContent = `
+CURRICULUM VITAE
+
+DATA PRIBADI
+Nama: Alvito Ricky Deanova
+Tempat, Tanggal Lahir: Jepara, 15 Januari 2005
+Alamat: Jepara, Jawa Tengah
+Email: alvito.ricky@example.com
+Telepon: +62 838-3034-3912
+
+PENDIDIKAN
+2023 - Sekarang    Universitas Nahdlatul Ulama Jepara
+                   Jurusan Ilmu Komputer
+2020 - 2023        SMA Negeri 1 Jepara
+                   Jurusan IPA
+
+PENGALAMAN ORGANISASI
+2023 - Sekarang    Himpunan Mahasiswa Ilmu Komputer
+                   Divisi Teknologi Informasi
+2022 - 2023        OSIS SMA Negeri 1 Jepara
+                   Koordinator Divisi Teknologi
+
+KETERAMPILAN
+- Pemrograman: HTML, CSS, JavaScript, Python
+- Soft Skills: Komunikasi, Kerja Tim, Manajemen Waktu
+- Tools: Git, SQL, React.js, Node.js
+
+PRESTASI
+- Juara Pertama Hackathon Universitas 2023
+- Daftar Dekan untuk Keunggulan Akademik (2022-2023)
+- Penghargaan Proyek Terbaik dalam Kursus Pengembangan Web
+`;
+
+            // Create blob and download
+            const blob = new Blob([cvContent], { type: 'text/plain' });
+            const url = window.URL.createObjectURL(blob);
+            const a = document.createElement('a');
+            a.href = url;
+            a.download = 'CV_Alvito_Ricky_Deanova.txt';
+            document.body.appendChild(a);
+            a.click();
+            document.body.removeChild(a);
+            window.URL.revokeObjectURL(url);
+        }
+
+        function createShootingStar() {
+            const star = document.createElement('div');
+            star.className = 'shooting-star';
+            document.querySelector('.night-sky').appendChild(star);
+            
+            // Random position and duration
+            const startX = Math.random() * window.innerWidth;
+            const startY = Math.random() * (window.innerHeight / 3);
+            const duration = 1000 + Math.random() * 2000;
+            
+            star.style.cssText = `
+                left: ${startX}px;
+                top: ${startY}px;
+                animation: shootingStar ${duration}ms linear forwards;
+            `;
+            
+            star.addEventListener('animationend', () => star.remove());
+        }
+
+        // Create shooting stars periodically
+        setInterval(createShootingStar, 3000);
+
+        // Add dinosaur jump functionality
+        document.querySelector('.dinosaur').addEventListener('click', function() {
+            this.style.animation = 'none';
+            this.offsetHeight; // Trigger reflow
+            this.style.animation = `
+                moveDino 0.6s steps(8) infinite,
+                runDino 15s linear infinite,
+                jump 0.8s cubic-bezier(0.4, 0, 0.2, 1)
+            `;
+        });
+
+        // Add jump animation
+        const style = document.createElement('style');
+        style.textContent = `
+            @keyframes jump {
+                0%, 100% { transform: translateY(0); }
+                50% { transform: translateY(-100px); }
+            }
+        `;
+        document.head.appendChild(style);
     </script>
 </body>
 </html>
